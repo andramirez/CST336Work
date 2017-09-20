@@ -1,0 +1,166 @@
+td{
+    padding:5px;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+a, a:hover{
+    color:#ffe6b3;
+}
+.hover tr:hover{
+    background-color: #0099cc;
+}
+.display{
+    padding:10px;
+}
+.buttons{
+    padding-left: 20px
+}
+.fsSubmitButton
+{
+padding: 5px 20px 6px !important;
+font-size: 14px !important;
+background-color: #9fc734;
+font-weight: bold;
+text-shadow: 1px 1px #9fc734;
+color: #ffffff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+.fsSubmitButton2
+{
+padding: 5px 10px 6px !important;
+font-size: 14px !important;
+background-color: #F36c8c;
+font-weight: bold;
+text-shadow: 1px 1px #F36c8c;
+color: #ffffff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+.nav-butt{
+    padding-top:10px;
+    padding-left:82%;
+    
+}
+.nav-butt2{
+    padding-top:10px;
+    padding-left:85%;
+}
+
+.fsSubmitButton3
+{
+padding: 5px 10px 6px;
+font-size: 14px !important;
+background-color: #F36c8c;
+font-weight: bold;
+text-shadow: 1px 1px #F36c8c;
+color: #ffffff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+.cart{
+    padding-top:50px;
+}
+
+form{
+    color:black;
+}
+body{
+    
+    padding:70px;
+}
+.gemSearch{
+    text-align: center;
+}
+.table2{
+    width:1000px;
+}
+.table2 tr{
+    height:45px;
+}
+.bigContainer{
+    color:white;
+    height:100%;
+    margin:-50px;
+    padding:60px;
+    background-image: url("index.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bigContainer2{
+    color:white;
+    height:460px;
+    margin:-50px;
+    padding:60px;
+    background-image: url("index.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bigContainer3{
+    color:white;
+    height:600px;
+    margin:-50px;
+    padding:60px;
+    background-image: url("index.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bigContainer3 th{
+    color:white;
+    padding-right:10px;
+}
+#user{
+    color:#0080ff;
+}
+.bigContainer4{
+    color:white;
+    height:900px;
+    margin:-50px;
+    padding:60px;
+    background-image: url("index.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.names{
+    color:#ffffb3;
+}

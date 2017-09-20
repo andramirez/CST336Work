@@ -1,0 +1,44 @@
+form {
+  margin-top : 30px;
+}
+
+input{
+    border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:25px; 
+    padding-left:10px; 
+    padding-right:10px; 
+  } 
+select{
+    border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:25px; 
+    padding-left:10px; 
+    padding-right:10px; 
+}
+legend{
+      font-family: Arial;
+      font-weight:bold;
+      font-size: 24px;
+      color: #002533;
+}
+.form{
+      padding-bottom: 5px;
+      padding-top:5px;
+      font-family: Arial;
+      font-weight:bold;
+      font-size: 18px;
+}
+.info{
+  border: 1px dashed #848484; 
+  padding-bottom:5px;
+}
+body{
+  background-color: #b3ecff
+}

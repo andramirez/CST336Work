@@ -1,0 +1,53 @@
+  .active {
+    color: #800000;
+    text-decoration: none;
+    overflow: auto;
+  }
+  
+  .active:hover {
+    color: #800000;
+  }
+  
+  #topnav {
+    width: 100%;
+    background-color: #8f609f;
+    height: 60px;
+    margin: 10px;
+  }
+  
+  #topnav ul.list {
+    display: table-row;
+    list-style-type: none;
+    padding: 0px;
+    overflow: auto;
+  }
+  
+  .list li {
+    float: left;
+    margin: 30px;
+    overflow: auto;
+  }
+  
+  li a {
+    color: #000;
+  }
+  
+  a {
+    color: #ff6699;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  .botlink {
+    color: #ff99cc;
+    font-size: 18px;
+  }
+  
+  body {
+    background-color: #666699;
+    font-family: "georgia";
+    padding-left:20px;
+    padding-right:20px;
+  }

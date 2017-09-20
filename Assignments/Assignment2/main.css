@@ -1,0 +1,52 @@
+.movies{
+    padding-left:20px;
+    padding-right:20px;
+    color:white;
+    font-size: 20px;
+    display:inline-block;
+}
+img{
+    width: 300px;
+}
+.title{
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 25px;
+    font-family:'Lucida Console';
+    color: white;
+    width:360px;
+    
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:#812801;
+}
+.title{
+    border:3px solid #cc0000;
+}
+img{
+   padding:30px;
+   border:3px solid #cc0000;
+   background-color:#330101;
+}
+
+body{
+    text-align: center;
+    padding:70px;
+    background-color:black;
+    border:5px solid #cc0000;
+    background-image: url("theater.jpg");
+    background-repeat: repeat-x;
+    margin: 40px;
+}
+.movie{
+    font-size:40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.playing{
+    color:white;
+    font-size:40px;
+}
+
+
+

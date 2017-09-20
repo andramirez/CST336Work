@@ -1,0 +1,43 @@
+  .active {
+    color: #800000;
+    text-decoration: none;
+    overflow: auto;
+  }
+  .active:hover {
+    color: #800000;
+  }
+  
+  
+  #topnav ul.list {
+    display: table-row;
+    list-style-type: none;
+    padding: 0px;
+    overflow: auto;
+  }
+  
+  .list li {
+    float: left;
+    margin: 30px;
+    overflow: auto;
+  }
+  
+  li a {
+    color: #000;
+  }
+  
+  a:hover {
+    color: orange;
+  }
+  
+  .footer {
+    width: 100%;
+    margin: 0px 0 0 0;
+    text-align: right;
+  }
+  .footer a{
+    color: green;
+  }
+  
+  body {
+    background-image: url("img/blue.jpg");
+  }

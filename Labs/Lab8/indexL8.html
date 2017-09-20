@@ -1,0 +1,278 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>signup</title>
+  <meta name="description" content="">
+  <meta name="author" content="lara4594">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel='stylesheet' type='text/css' href='main.css' />
+ 
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+ 
+  
+  <script>
+  
+  
+      function checkEmail(){
+      
+          if (/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/.test($('#email').val())) {
+                    $('#emailError').html('Valid Email!');
+                    $('#emailError').css("color","green");
+                    
+                }
+    
+                else {
+                    $('#emailError').html('Invalid Email!');
+                    $('#emailError').css("color","red");
+                }
+      }     
+      function getCity(){
+          
+        //   alert($("#zipCode").val());
+        
+        
+      $.ajax({
+            type: "get",
+            url: 'http://hosting.otterlabs.org/laramiguel/ajax/zip.php',
+            dataType: "json",
+            data: { "zip_code":$("#zipCode").val()},
+            success: function(data,status) {
+                 //alert(data['city']);
+                 $("#city").html(data['city']);
+                 $("#latitude").html(data['latitude']);
+                 $("#longitude").html(data['longitude']);
+              },
+              complete: function(data,status) { //optional, used for debugging purposes
+                  //alert(status);
+              }
+         }); //end Ajax          
+          
+          
+          
+      } //endFunction
+      
+     function getCounty(){
+             
+            //  alert($("#state").val());
+
+             
+         $.ajax({
+            type: "get",
+            url: 'http://hosting.otterlabs.org/laramiguel/ajax/countyList.php',
+            dataType: "json",
+            data: { "state":$("#state").val() },
+            success: function(data,status) {
+                 //alert(data['counties'][0].county);
+                 
+                 $("#county").html("<option> - Select One - </option>");
+                 
+                 for (var i=0; i < data['counties'].length;  i++) {
+                     
+                     $("#county").append("<option>" + data['counties'][i].county + "</option>");
+                     
+                 }
+                 
+                 
+              },
+            complete: function(data,status) { //optional, used for debugging purposes
+                 //alert(status);
+              }
+         });
+
+             
+     } //endFunction
+      
+      function checkPassword()
+      {
+          if($('#password').val().length < 8){
+              $('#passwordError').html("The password must be longer than 8 characters!");
+              $('#passwordError').css("color","red");
+          }
+          
+          else if ( !/[0-9]/.test($('#password').val()) ) {
+              $('#passwordError').html("The password must have one digit!");
+              $('#passwordError').css("color","red");
+          }
+          
+          else if ( !/[A-Z]/.test($('#password').val()) ) {
+              $('#passwordError').html("The password must have one uppercase character!");
+              $('#passwordError').css("color","red");
+          }  
+          else{
+              $('#passwordError').html("All Good!");
+              $('#passwordError').css("color","green");
+          }
+          
+      }
+      function checkrePassword()
+      {
+          if(($('#rePassword').val()) != ($('#password').val())){
+              $('#rePasswordError').html("The password must match your previous Entry!");
+              $('#rePasswordError').css("color","red");
+          }
+          else{
+              $('#rePasswordError').html("All Good!");
+              $('#rePasswordError').css("color","green");
+          }
+
+          
+      }
+      
+      function checkUsername()
+      {
+        //   alert($('#username').val());
+          
+          if($('#username').val().length < 5){
+              
+              $('#usernameError').html("Username must be longer than 5 characters!");
+              return;
+              
+          }
+          else{
+              $.ajax({
+            type: "get",
+            url: "http://hosting.otterlabs.org/laramiguel/cst336/labs/lab8/verifyUsername.php",
+            dataType: "json",
+            data: {"username" : $('#username').val() },
+            success: function(data,status) {
+                
+                if (data['available'] == "false") {
+                
+                   $('#usernameError').html("NOT available");    
+                   $('#usernameError').css("color","red");
+                   $('#username').css("backgroundColor","red");
+                    $('#username').focus();
+                    
+                } else {
+                    
+                   $('#usernameError').html("Available!");
+                   $('#usernameError').css("color","green");
+                   $('#username').css("backgroundColor","");
+                    
+                }
+                
+                 
+              },
+            complete: function(data,status) { //optional, used for debugging purposes
+                 //alert(status);
+              }
+         }); 
+          }
+          
+          
+      }
+      
+      function checkPhone(){
+                
+                if ( $('#phone').val().length != 10) {
+                    $('#PhoneError').html('Must be 10 Numbers!');
+                    $('#PhoneError').css("color","red");
+                }
+                else if (/\D/.test( $('#phone').val())) {
+                    $('#PhoneError').html('Must Be All Numbers!');
+                    $('#PhoneError').css("color","red");
+                }
+                else {
+                    $('#PhoneError').html('All Good!');
+                    $('#PhoneError').css("color","green");
+                }
+
+      }
+      
+      
+    $( document ).ready(function() {
+      console.log( "ready!" );
+        $("#email").change(function(){checkEmail()});
+        $("#zipCode").change(function(){getCity()});
+        $("#state").change(function(){getCounty()});
+        $("#username").change(function(){checkUsername()});
+        $("#password").change(function(){checkPassword()});
+        $("#rePassword").change(function(){checkrePassword()});
+        $("#phone").change(function(){checkPhone()});
+     });
+      
+      
+  </script>
+</head>
+
+<body>
+  <div>
+
+    <div>
+      <form>
+          <fieldset>
+              <legend>Sign Up</legend>
+              <div class = "form">
+                First Name: <input type="text" name="firstName"><br />
+              </div>
+              <div class = "form">
+                  Last name: <input type="text" name="lastName" id="lastName"> <br />
+              </div>
+              <div class = "form">
+                  Email: <input type="text" name="email" id="email"><span id="emailError"></span><br /><br />
+              </div>
+              <div class = "form">
+                  Zip Code: <input type="text" name="zipCode" id="zipCode"><br /><br /> 
+              </div>
+              <div class="info">
+                <div class = "form">
+                  City: <span id="city"></span> <br />
+              </div>
+            <div class = "form">
+                Latitude: <span id="latitude"></span><br />
+            </div>
+            <div class = "form">
+                Longitude: <span id="longitude"></span><br />
+            </div>
+              </div><br />
+            <div class = "form">
+                State: <input type="text" name="state" id="state">Use the two letter abbr.<br>
+            </div>
+            <div class = "form">
+                County: <select name="county" id="county">
+                 <option>- Select One -</option>    
+                 </select><br>
+            </div>
+            <div class = "form">
+                Username: <input type="text" name="username" id="username"><span id="usernameError"></span><br />
+            </div>
+            <div class = "form">
+                Password: <input type="password" name="password" id="password" /><span id="passwordError"></span> <br />
+            </div>
+            <div class = "form">
+                Type Password Again: <input type="password" name="rePassword" id="rePassword" /><span id="rePasswordError"></span><br /><br />
+            </div>
+             <div class = "form">
+                 Phone Number: <input type="text" name="phone" id="phone" /><span id="PhoneError"></span><br/>
+             </div>
+             <div class = "form">
+                 <input type="submit" value="Sign up!" />
+             </div>
+         
+          </fieldset>
+          
+      </form>
+    </div>
+
+    <footer>
+    </footer>
+  </div>
+
+
+
+</body>
+
+
+
+</html>

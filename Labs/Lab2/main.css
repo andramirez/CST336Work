@@ -1,0 +1,24 @@
+  table{
+    border:none;
+    float:left;
+    height: 100px;
+    width:100px;
+    padding: 10px;
+    
+  }
+  body{
+    padding-top: 100px;
+    margin: auto;
+    overflow: auto;
+    padding-left:700px;
+  }
+  /* ID for div that seperates words */
+  #mame{
+    padding-top: 100px;
+    
+  }
+  
+  .mainT{
+    margin-left:auto; 
+    margin-right:auto;
+  }

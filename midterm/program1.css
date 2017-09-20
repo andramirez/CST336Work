@@ -1,0 +1,16 @@
+body{
+    background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    table th,  table td {
+      border: 1px solid gray;
+      height:15px !important;
+      padding: 3px !important;
+      width: 16%;
+    }
+  .g{
+    font-size:18px;
+  }

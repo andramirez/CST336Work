@@ -1,0 +1,303 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    /*background-color: #111; */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	background-color: #c6d9f0;
+	border: 2px solid #4b749b;
+	border-radius: 30px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.section:hover, .offcanvas a:focus{
+    background-color:#000066;
+    width: 80%;
+	border: 2px solid #4b749b;
+	border-radius: 50px;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding:60px;
+    
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.sideNavButton{
+    padding-left:15px;
+    width: 35px;
+    height:35px;
+}
+.Fixed
+{
+    position: fixed;
+    top: 20px;
+}
+.container{
+	position: relative;
+	width: 90%;
+	background-color: #c1ff80;
+	border: 3px solid #2d5016;
+	border-radius: 30px;
+	box-shadow: 2px 2px 4px #888;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	margin-bottom:50px;
+}
+.title{
+    width:60%;
+    padding-left:40px;
+}
+.img{
+    position: absolute;
+    visibility: visible;
+    right:110px;
+    top: 200px;
+    z-index: 200;
+}
+.imgIM{
+    border-radius:10%;
+    overflow:hidden;
+}
+#main{
+    font-family:Arial;
+}
+.intro{
+    font-size:32px;
+    font-weight:bold;
+    padding-bottom: 60px;
+    padding-top:30px;
+
+}
+.text-input{
+    padding-left:40px;
+    padding-bottom:60px;
+    font-size:24px;
+    font-weight:bold;
+    
+}
+.form-control {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: #ceff99;
+    margin: 0 0 10px 0;
+    width:300px;
+    font-size:22px;
+}
+select{
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 5px;
+    background: #ceff99;
+    margin: 0 0 10px 0;
+    width:75px;
+    font-size:22px;
+}
+.year{
+        border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 7px;
+    background: #ceff99;
+    margin: 0 0 10px 0;
+    width:45px;
+    font-size:22px;
+}
+.ageLimit{
+    font-size:16px;
+}
+#gender{
+    font-size:20px;
+    padding-left:20px;
+}
+#gender-input{
+    padding:10px;
+}
+.offers-input{
+    padding-left:45px;
+    font-weight:normal;
+    padding-bottom:10px;
+
+}
+#offers{
+    padding-top:50px;
+}
+.required{
+    color:red;
+    font-weight:bold;
+}
+.ZIP{
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 7px;
+    background: #ceff99;
+    margin: 0 0 10px 0;
+    width:65px;
+    font-size:22px;
+}
+.state{
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding:5px;
+    background: #ceff99;
+    margin: 0 0 10px 0;
+    font-size:22px;
+    width:175px;
+}
+#state{
+    padding-right:30px;
+    padding-left:65px;
+}
+#city{
+    padding-left:65px;
+}
+.btn{
+    height:100px; 
+    width:200px; 
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    background: #ceff99;
+    font-size:22px;
+            position:relative;
+        left:45%;
+}
+.formcont{
+    font-size:32px;
+    padding-bottom: 60px;
+    padding-top:30px;
+}
+.place{
+    font-size:28px;
+    padding-left: 60px;
+    padding-top:20px;
+}
+.con{
+    padding-bottom:20px;
+}
+.conEntries{
+    padding-bottom:70px;
+}
+.container2{
+    font-size:28px;
+    /*padding-left: 60px;*/
+    /*padding-top:20px;*/
+    position: relative;
+	width: 90%;
+	height:1300x;
+	background-color: #c1ff80;
+	border: 3px solid #2d5016;
+	border-radius: 30px;
+	box-shadow: 2px 2px 4px #888;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	margin-bottom:50px;
+}
+.result{
+    padding-left:70px;
+    padding-top:80px;
+    padding-bottom:50px;
+}
+.result2{
+    padding-bottom:50px;
+}
+.add{
+    padding-left:90px;
+    padding-bottom:90px;
+}
+.resImg{
+    max-width:600px;
+    display:block;
+    margin-left:auto;
+	margin-right:auto;
+    width:100%;
+}
+
+
+
+
+
+
